@@ -10,6 +10,7 @@ type IconProps = {
 export const Icon = (props: IconProps) => {
   return (
     <svg
+      // style={{ flexShrink: 0 }} 
       width={props.width || "120"}
       height={props.height || "120"}
       viewBox={props.viewBox || "0 0 120 120"}
