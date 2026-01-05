@@ -23,6 +23,9 @@ const Image = styled.img`
 `
 
 const MainWrap = styled.div`
+  background-color: aquamarine;
+  margin: 0 auto;
+  width: 1200px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 `
