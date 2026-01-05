@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { Title } from "../../../components/title/Title.styled"
+import { SectionTitle } from "../../../components/sectionTitle/SectionTitle.styled"
 import { Skill } from "./skill/skill";
 
 export const Skills = () => {
   return (
     <SkillsSection>
-      <Title>Skills</Title>
+      <SectionTitle>Skills</SectionTitle>
       <ListSkills>
         <Skill iconId="js" name="java script"/>
         <Skill iconId="mongodb" name="mongodb"/>
