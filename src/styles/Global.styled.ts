@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-
+import { Theme } from './Theme'
 export const GlobalStyle = createGlobalStyle`
     *,
     *::before,
@@ -16,6 +16,33 @@ export const GlobalStyle = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 4%;
+        background-color: ${Theme.colors.background};
+        color: ${Theme.colors.text};
+    }
+
+    h1 {
+        font-family: 'Tinos', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 26px;
+        letter-spacing: 4%;
+        color: ${Theme.colors.title}
+    }
+
+    h3 {
+        font-weight: 600;
+        font-size: 20px;
+        color: ${Theme.colors.title}
     }
 
     a {
