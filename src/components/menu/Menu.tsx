@@ -1,29 +1,17 @@
-import styled from "styled-components";
+import { Button } from "../button/Button";
+import { FlexWrapper } from "../FlexWrapper.styled";
 
 export const Menu = () => {
   return (
-    <NavMenu>
-      <ul>
-        {/* <li>
-                    <a href="#">Home</a>
-                </li> */}
+    <nav>
+      <FlexWrapper as="ul" justify="center" gap="70px">
         <li>
           <a href="#">Projects</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <Button as="a" href="#">Contact</Button>
         </li>
-      </ul>
-    </NavMenu>
+      </FlexWrapper>
+    </nav>
   );
 };
-
-const NavMenu = styled.nav`
-  ul {
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-  }
-`;

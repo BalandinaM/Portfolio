@@ -1,16 +1,28 @@
 import styled from "styled-components";
 import { Menu } from "../../components/menu/Menu";
+import { Container } from "../../components/Container";
+import { FlexWrapper } from "../../components/FlexWrapper.styled";
 
 export const Header = () => {
   return (
     <StyledHeader>
-      <Logo>
-        <a href="#">Home</a>
-      </Logo>
-      <Menu />
+      <Container>
+        <FlexWrapper justify="flex-end" >
+          <Logo>
+            <a href="#">Home</a>
+          </Logo>
+          <Menu />
+        </FlexWrapper>
+      </Container>
     </StyledHeader>
   );
 };
+
+const StyledHeader = styled.header`
+  font-size: 16px;
+  font-weight: 500;
+  padding: 38px 0;
+`
 
 const Logo = styled.div`
   margin-right: auto;
@@ -19,11 +31,4 @@ const Logo = styled.div`
   a {
     margin: auto;
   }
-`;
-const StyledHeader = styled.header`
-  background-color: teal;
-  width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-end;
 `;

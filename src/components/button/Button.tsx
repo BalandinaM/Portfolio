@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Theme } from "../../styles/Theme";
 
 type ButtonProps = {
     transform?: string;
@@ -6,8 +7,8 @@ type ButtonProps = {
 
 export const Button = styled.button<ButtonProps>`
     padding: 12px 20px;
-    background-color: blue;
-    color: white;
+    background-color: ${Theme.colors.primary};
+    color: ${Theme.colors.buttonText};
     text-transform: ${props => props.transform || ""};
     border: none;
     border-radius: 5px;
