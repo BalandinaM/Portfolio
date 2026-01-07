@@ -17,7 +17,7 @@ export const Contacts = () => {
         </InputWrap>
         <InputWrap>
           <Label htmlFor="textarea">Mensaje</Label>
-          <Textarea name="textarea" id="textarea" />
+          <Field as={"textarea"} id="textarea" />
         </InputWrap>
         <Button type="submit">Submit</Button>
       </Form>
@@ -53,4 +53,4 @@ const InputWrap = styled.div`
 const Label = styled.label``;
 
 const Field = styled.input``;
-const Textarea = styled.textarea``;
+
