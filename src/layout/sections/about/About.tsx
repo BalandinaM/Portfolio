@@ -1,21 +1,34 @@
 import styled from "styled-components"
 import { SectionTitle } from "../../../components/sectionTitle/SectionTitle.styled"
+import { Container } from "../../../components/Container"
+import { Theme } from "../../../styles/Theme"
 
 export const About = () => {
   return (
-    <AboutStyling>
-        <SectionTitle>About me</SectionTitle>
-        <p>The long barrow was built on land previously inhabited in the Mesolithic period. It consisted of a sub-rectangular earthen tumulus, estimated to have been 15 metres (50 feet) in length, with a chamber built from sarsen megaliths on its eastern end. Both inhumed and cremated human remains were placed within this chamber during the Neolithic period, representing at least nine or ten individuals.</p>
-    </AboutStyling>
+    <Container>
+        <Title>Обо мне</Title>
+        <Text>Длинный курган был построен на земле, ранее заселенной в эпоху мезолита. Он состоял из земляного кургана прямоугольной формы, длина которого, по оценкам, составляла 15 метров (50 футов), с помещением, построенным из сарсеновых мегалитов на его восточном конце. В эпоху неолита в эту камеру помещали как погребенные, так и кремированные человеческие останки, представляющие собой по меньшей мере девять или десять особей.</Text>
+    </Container>
   )
 }
 
-const AboutStyling = styled.section`
-    width: 1200px;
-    margin: 0 auto;
-    background-color: #eed5cf;
+const Title = styled.h2`
+  padding-left: 20px;
+  margin-bottom: 20px;
+`
 
-    p {
-        
-    }
+const Text = styled.p`
+  padding-left: 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: ${Theme.colors.primary};
+    border-radius: 5px;
+  }
 `
