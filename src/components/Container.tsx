@@ -6,5 +6,6 @@ export const Container = styled.div`
     min-height: 100%;
     margin: 0 auto;
     /* padding: 0 25px; */
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
+    padding-bottom: 140px;
 `;

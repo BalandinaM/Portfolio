@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
 
         font-size: 18px;
         line-height: 26px;
-        letter-spacing: 4%;
+        letter-spacing: 0.04em;
         background-color: ${Theme.colors.background};
         color: ${Theme.colors.text};
     }
@@ -35,7 +35,6 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 600;
         font-size: 24px;
         line-height: 26px;
-        letter-spacing: 4%;
         color: ${Theme.colors.title}
     }
 
@@ -48,7 +47,19 @@ export const GlobalStyle = createGlobalStyle`
     a {
         text-decoration: none;
         color: inherit;
+        padding: 12px 20px;
+
+        &:hover {
+            
+            background-color: ${Theme.colors.primary};
+            font-size: 16px;
+            font-weight: 500;
+            color: ${Theme.colors.buttonText};
+            border: none;
+            border-radius: 5px;
+        }
     }
+
 
     ul {
         list-style: none;
