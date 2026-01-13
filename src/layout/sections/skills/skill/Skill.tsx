@@ -10,7 +10,7 @@ export const Skill = (props:SkillPropsType) => {
   return (
     <SkillItem>
       <Icon iconId={props.iconId}/>
-      <span>{props.name}</span>
+      <Text>{props.name}</Text>
     </SkillItem>
   );
 };
@@ -22,4 +22,9 @@ const SkillItem = styled.li`
   align-items: center;
   justify-content: center;
   gap: 20px;
+`
+
+const Text = styled.span`
+  font-size: 16px;
+  text-transform: uppercase;
 `
