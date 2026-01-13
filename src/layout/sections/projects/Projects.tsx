@@ -1,54 +1,50 @@
-import styled from "styled-components";
-import { SectionTitle } from "../../../components/sectionTitle/SectionTitle.styled";
 import { Project } from "./project/Project";
 import imgProject from "../../../assets/image.png"
+import { Container } from "../../../components/Container";
+import { FlexWrapper } from "../../../components/FlexWrapper.styled";
+
+const ProjectsData = [
+  {
+    srcImg: imgProject,
+    title: "Название проекта",
+    stack: ["js", "postgresql", "react", "redux"],
+    text: "Я не заслуживаю того, чтобы стать худшим кошмаром, который я когда-либо видел. Это самая худшая работа, которую я когда-либо выполнял. Упражнение приходит как следствие Нострадамуса."
+  },
+  {
+    srcImg: imgProject,
+    title: "Название проекта",
+    stack: ["js", "postgresql", "react", "redux"],
+    text: "Я не заслуживаю того, чтобы стать худшим кошмаром, который я когда-либо видел. Это самая худшая работа, которую я когда-либо выполнял. Упражнение приходит как следствие Нострадамуса."
+  },
+  {
+    srcImg: imgProject,
+    title: "Название проекта",
+    stack: ["js", "postgresql", "react", "redux"],
+    text: "Я не заслуживаю того, чтобы стать худшим кошмаром, который я когда-либо видел. Это самая худшая работа, которую я когда-либо выполнял. Упражнение приходит как следствие Нострадамуса."
+  },
+  {
+    srcImg: imgProject,
+    title: "Название проекта",
+    stack: ["js", "postgresql", "react", "redux"],
+    text: "Я не заслуживаю того, чтобы стать худшим кошмаром, который я когда-либо видел. Это самая худшая работа, которую я когда-либо выполнял. Упражнение приходит как следствие Нострадамуса."
+  },
+]
 
 export const Projects = () => {
   return (
-    <ProjectsSection>
-      <SectionTitle>Projects</SectionTitle>
-      <ListProjects>
-        <Project
-            srcImg={imgProject}
-            title={"Title Project"}
-            stack={["js", "postgresql", "react", "redux"]}
-            text={"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."}
-        />
-        <Project
-            srcImg={imgProject}
-            title={"Title Project"}
-            stack={["js", "postgresql", "react", "redux"]}
-            text={"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."}
-        />
-        <Project
-            srcImg={imgProject}
-            title={"Title Project"}
-            stack={["js", "postgresql", "react", "redux"]}
-            text={"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."}
-        />
-        <Project
-            srcImg={imgProject}
-            title={"Title Project"}
-            stack={["js", "postgresql", "react", "redux"]}
-            text={"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."}
-        />
-      </ListProjects>
-    </ProjectsSection>
+    <Container>
+      <h2>Проекты</h2>
+      <FlexWrapper as="ul" wrap="wrap" colGap="30px" rowGap="15px">
+        {ProjectsData.map((project, index) => (
+          <Project
+            key={index}
+            srcImg={project.srcImg}
+            title={project.title}
+            stack={project.stack}
+            text={project.text}
+          />
+        ))}
+      </FlexWrapper>
+    </Container>
   );
 };
-
-const ProjectsSection = styled.section`
-  width: 1200px;
-  margin: 0 auto;
-  background-color: #c8f7f0;
-`;
-
-const ListProjects = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  row-gap: 15px;
-  column-gap: 30px;
-  padding: 0;
-`;

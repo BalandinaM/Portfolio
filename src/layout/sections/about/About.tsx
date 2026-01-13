@@ -14,7 +14,6 @@ export const About = () => {
 
 const Title = styled.h2`
   padding-left: 20px;
-  margin-bottom: 20px;
 `
 
 const Text = styled.p`

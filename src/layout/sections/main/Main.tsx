@@ -12,7 +12,7 @@ export const Main = () => {
     <MainSection>
       <Container>
         <FlexWrapper>
-            <FlexWrapper direction="column" justify="flex-start" gap="20px" align="flex-start">
+            <FlexWrapper direction="column" justify="flex-start" rowGap="20px" align="flex-start">
                 <Title>Front-end разработчик</Title>
                 <Name>Баландина Марина</Name>
                 <Text>По крайней мере, я не заслуживаю того, чтобы меня бросили... Это заноза в заднице. Это самая худшая работа, которую я когда-либо выполнял. В результате появляются физические упражнения.</Text>

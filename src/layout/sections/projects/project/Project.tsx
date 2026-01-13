@@ -1,45 +1,55 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import { Theme } from "../../../../styles/Theme";
 
 type ProjectPropsType = {
-    srcImg: string;
-    title: string;
-    stack: Array<string>;
-    text: string;
-}
+  srcImg: string;
+  title: string;
+  stack: Array<string>;
+  text: string;
+};
 
 export const Project = (props: ProjectPropsType) => {
   return (
     <ProjectItem>
-        <Image src={props.srcImg} alt={props.title}/>
+      <Image src={props.srcImg} alt={props.title} />
+      <WrapContent>
         <ProjectTitle>{props.title}</ProjectTitle>
         <TechStack>
-            {props.stack.map((tech, index) => (
-                <TechStackItem key={index}>{tech}</TechStackItem>
-            ))}
+          {props.stack.map((tech, index) => (
+            <TechStackItem key={index}>{tech}</TechStackItem>
+          ))}
         </TechStack>
         <Text>{props.text}</Text>
+      </WrapContent>
     </ProjectItem>
-  )
-}
+  );
+};
 
 const ProjectItem = styled.li`
-  padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
-  width: 522px;
+  max-width: 522px;
   box-sizing: border-box;
+  box-shadow: ${Theme.boxShadow.projectCard};
 `;
 
 const Image = styled.img`
-    width: 522px;
-    height: 388px;
-    object-fit: cover;
-`
+  width: 522px;
+  height: 388px;
+  object-fit: cover;
+`;
+const WrapContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+`;
+
 const ProjectTitle = styled.h3`
-    color: #00abee;
-`
+  text-transform: uppercase;
+`;
 
 const TechStack = styled.ul`
   display: flex;
@@ -47,14 +57,19 @@ const TechStack = styled.ul`
   justify-content: flex-start;
   gap: 10px;
   padding: 0;
-`
+`;
 
 const TechStackItem = styled.li`
-    padding: 8px 16px;
-    background-color: cornflowerblue;
-    border-radius: 5px;
-    color: white;
-`
+  padding: 8px 16px;
+  background-color: ${Theme.colors.primary};
+  border-radius: ${Theme.borderRadius.borderRadius};
+  color: ${Theme.colors.buttonText};
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+`;
 const Text = styled.p`
-    
-`
+  font-size: 16px;
+  line-height: 24px;
+`;

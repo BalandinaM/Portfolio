@@ -12,6 +12,10 @@ export const Theme = {
         projectCard: "2px 2px 32px 0px rgba(40, 38, 44, 0.15)",
     },
 
+    borderRadius: {
+        borderRadius: "5px"
+    }
+
     // night theme
     // colors: {
     //     background: "#041F31",

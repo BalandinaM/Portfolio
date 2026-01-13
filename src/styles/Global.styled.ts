@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
 
         font-size: 18px;
         line-height: 26px;
+        font-weight: 400;
         letter-spacing: 0.04em;
         background-color: ${Theme.colors.background};
         color: ${Theme.colors.text};
@@ -35,7 +36,8 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 600;
         font-size: 24px;
         line-height: 26px;
-        color: ${Theme.colors.title}
+        color: ${Theme.colors.title};
+        margin-bottom: 20px;
     }
 
     h3 {
@@ -50,13 +52,12 @@ export const GlobalStyle = createGlobalStyle`
         padding: 12px 20px;
 
         &:hover {
-            
             background-color: ${Theme.colors.primary};
             font-size: 16px;
             font-weight: 500;
             color: ${Theme.colors.buttonText};
             border: none;
-            border-radius: 5px;
+            border-radius: ${Theme.borderRadius.borderRadius};
         }
     }
 
