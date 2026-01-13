@@ -32,19 +32,21 @@ const ProjectsData = [
 
 export const Projects = () => {
   return (
-    <Container>
-      <h2>Проекты</h2>
-      <FlexWrapper as="ul" wrap="wrap" colGap="30px" rowGap="15px">
-        {ProjectsData.map((project, index) => (
-          <Project
-            key={index}
-            srcImg={project.srcImg}
-            title={project.title}
-            stack={project.stack}
-            text={project.text}
-          />
-        ))}
-      </FlexWrapper>
-    </Container>
+    <section>
+      <Container>
+        <h2>Проекты</h2>
+        <FlexWrapper as="ul" wrap="wrap" colGap="30px" rowGap="15px">
+          {ProjectsData.map((project, index) => (
+            <Project
+              key={index}
+              srcImg={project.srcImg}
+              title={project.title}
+              stack={project.stack}
+              text={project.text}
+            />
+          ))}
+        </FlexWrapper>
+      </Container>
+    </section>
   );
 };

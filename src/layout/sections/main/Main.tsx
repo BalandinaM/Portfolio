@@ -9,7 +9,7 @@ import { Theme } from "../../../styles/Theme"
 
 export const Main = () => {
   return (
-    <MainSection>
+    <section>
       <Container>
         <FlexWrapper>
             <FlexWrapper direction="column" justify="flex-start" rowGap="20px" align="flex-start">
@@ -21,13 +21,13 @@ export const Main = () => {
             <Image src={Avatar} alt="Аватар" />
         </FlexWrapper>
       </Container>
-    </MainSection>
+    </section>
   )
 }
 
-const MainSection = styled.section`
-  position: relative;
-` 
+// const MainSection = styled.section`
+//   position: relative;
+// ` 
 
 const Title = styled.h1`
   

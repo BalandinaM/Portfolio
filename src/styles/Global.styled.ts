@@ -37,7 +37,7 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 24px;
         line-height: 26px;
         color: ${Theme.colors.title};
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     h3 {
