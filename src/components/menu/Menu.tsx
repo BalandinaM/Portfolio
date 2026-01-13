@@ -4,7 +4,7 @@ import { FlexWrapper } from "../FlexWrapper.styled";
 export const Menu = () => {
   return (
     <nav>
-      <FlexWrapper as="ul" justify="center" gap="70px">
+      <FlexWrapper as="ul" justify="center" colGap="70px">
         <ItemList>
           <a href="#">Проекты</a>
         </ItemList>
@@ -17,5 +17,5 @@ export const Menu = () => {
 };
 
 const ItemList = styled.li`
-  padding: 12px 20px;
+  /* padding: 12px 20px; */
 `

@@ -2,20 +2,22 @@ import styled from "styled-components";
 import { Menu } from "../../components/menu/Menu";
 import { ListLinks } from "./listLinks/ListLinks";
 import { Container } from "../../components/Container";
+import { FlexWrapper } from "../../components/FlexWrapper.styled";
 
 export const Footer = () => {
   return (
-    <FooterStyled>
+    <section>
       <Container>
-        <ListLinks />
-        <Menu />
-        <small>WEB DEVELOPER 2021</small>
+        <FlexWrapper direction="column" align="center" rowGap="50px">
+          <ListLinks />
+          <Menu />
+          <Copyright>WEB DEVELOPER 2026</Copyright>
+        </FlexWrapper>
       </Container>
-    </FooterStyled>
+    </section>
   );
 };
 
-const FooterStyled = styled.footer`
-  background-color: #b6b900b7;
-  text-align: center;
-`;
+const Copyright = styled.span`
+  text-transform: uppercase;
+`

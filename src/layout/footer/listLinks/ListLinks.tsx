@@ -1,42 +1,89 @@
 import styled from "styled-components";
-import { Icon } from "../../../components/icon/Icon"
+import { Icon } from "../../../components/icon/Icon";
+import { Theme } from "../../../styles/Theme";
+
+const ContactsData = [
+  {
+    id: 1,
+    href: "#",
+    iconId: "gmail",
+    iconWidth: "38px",
+    iconHeight: "38px",
+    iconViewBox: "0 0 38 38",
+    text: "Gmail",
+  },
+  {
+    id: 2,
+    href: "#",
+    iconId: "linkedin",
+    iconWidth: "38px",
+    iconHeight: "38px",
+    iconViewBox: "0 0 38 38",
+    text: "Linkedin",
+  },
+  {
+    id: 3,
+    href: "#",
+    iconId: "github",
+    iconWidth: "38px",
+    iconHeight: "38px",
+    iconViewBox: "0 0 38 38",
+    text: "Github",
+  },
+];
 
 export const ListLinks = () => {
   return (
     <ListLinksStyled>
-        <li>
-            <Link href="#">
-                <Icon iconId="gmail" width="38px" height="38px" viewBox="0 0 38 38"/>
-                <span>Gmail</span>
-            </Link>
+      {ContactsData.map((contact) => (
+        <li key={contact.id}>
+          <Link href={contact.href}>
+            <Icon
+              iconId={contact.iconId}
+              width={contact.iconWidth}
+              height={contact.iconHeight}
+              viewBox={contact.iconViewBox}
+            />
+            <Text>{contact.text}</Text>
+          </Link>
         </li>
-        <li>
-            <Link href="#">
-                <Icon iconId="linkedin" width="38px" height="38px" viewBox="0 0 38 38"/>
-                <span>Linkedin</span>
-            </Link>
-        </li>
-        <li>
-            <Link href="#">
-                <Icon iconId="github" width="38px" height="38px" viewBox="0 0 38 38"/>
-                <span>Github</span>
-            </Link>
-        </li>
+      ))}
     </ListLinksStyled>
-  )
-}
+  );
+};
 
 const ListLinksStyled = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 30px;
-  list-style: none;
+  gap: 70px;
 `;
 
 const Link = styled.a`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+
+  &:hover {
+    background-color: transparent;
+
+    & svg {
+      transform: scale(1.2);
+    }
+
+    & span {
+      color: ${Theme.colors.text};
+      transform: scale(1.2);
+    }
+  }
+`;
+
+const Text = styled.span`
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+`;

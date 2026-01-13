@@ -8,7 +8,7 @@ export const Contacts = () => {
   return (
     <section>
       <Container>
-        <SectionTitle>Contacts</SectionTitle>
+        <SectionTitle>Обратная связь</SectionTitle>
         <Form>
           <InputWrap>
             <Label htmlFor="name">Имя</Label>
@@ -22,7 +22,7 @@ export const Contacts = () => {
             <Label htmlFor="textarea">Сообщение</Label>
             <TextareaField as={"textarea"} id="textarea" placeholder="Привет!..."/>
           </InputWrap>
-          <Button type="submit">Submit</Button>
+          <Button type="submit">Отправить</Button>
         </Form>
       </Container>
     </section>

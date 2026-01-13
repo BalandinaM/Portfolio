@@ -7,7 +7,7 @@ export const Header = () => {
   return (
     <StyledHeader>
       <Container>
-        <FlexWrapper justify="flex-end" >
+        <FlexWrapper justify="flex-end" align="center">
           <Logo>
             <a href="#">Главная</a>
           </Logo>

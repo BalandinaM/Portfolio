@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        height: 100vh;
         margin: 0;
         font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -50,13 +51,13 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         color: inherit;
         padding: 12px 20px;
+        font-size: 16px;
+        border: none;
 
         &:hover {
             background-color: ${Theme.colors.primary};
-            font-size: 16px;
-            font-weight: 500;
             color: ${Theme.colors.buttonText};
-            border: none;
+            font-weight: 500;
             border-radius: ${Theme.borderRadius.borderRadius};
         }
     }
@@ -67,6 +68,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     button {
+        letter-spacing: 0.04em;
         background-color: unset;
         border: none;
     }
