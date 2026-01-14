@@ -8,7 +8,7 @@ export const Contacts = () => {
   return (
     <section>
       <Container>
-        <SectionTitle>Обратная связь</SectionTitle>
+        <h2>Обратная связь</h2>
         <Form>
           <InputWrap>
             <Label htmlFor="name">Имя</Label>

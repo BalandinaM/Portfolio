@@ -4,7 +4,7 @@ import { FlexWrapper } from "../FlexWrapper.styled";
 export const Menu = () => {
   return (
     <nav>
-      <FlexWrapper as="ul" justify="center" colGap="70px">
+      <FlexWrapper as="ul" $justify="center" $colgap="70px">
         <ItemList>
           <a href="#">Проекты</a>
         </ItemList>

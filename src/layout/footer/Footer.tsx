@@ -6,17 +6,21 @@ import { FlexWrapper } from "../../components/FlexWrapper.styled";
 
 export const Footer = () => {
   return (
-    <section>
+    <StyledFooter>
       <Container>
-        <FlexWrapper direction="column" align="center" rowGap="50px">
+        <FlexWrapper $direction="column" $align="center" $rowgap="50px">
           <ListLinks />
           <Menu />
           <Copyright>WEB DEVELOPER 2026</Copyright>
         </FlexWrapper>
       </Container>
-    </section>
+    </StyledFooter>
   );
 };
+
+const StyledFooter = styled.footer`
+  padding:70px 0;
+`
 
 const Copyright = styled.span`
   text-transform: uppercase;

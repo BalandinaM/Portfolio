@@ -55,13 +55,15 @@ const SkillsData = [
 
 export const Skills = () => {
   return (
-    <Container>
-      <h2>Технологии</h2>
-      <FlexWrapper as="ul" wrap="wrap" gap="30px" >
-        {SkillsData.map((skill, index) => (
-          <Skill key={index} iconId={skill.iconId} name={skill.name} />
-        ))}
-      </FlexWrapper>
-    </Container>
+    <section>
+      <Container>
+        <h2>Технологии</h2>
+        <FlexWrapper as="ul" $wrap="wrap" $gap="30px" $justify="center">
+          {SkillsData.map((skill, index) => (
+            <Skill key={index} iconId={skill.iconId} name={skill.name} />
+          ))}
+        </FlexWrapper>
+      </Container>
+    </section>
   );
 };

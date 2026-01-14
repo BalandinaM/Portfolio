@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Theme } from "../../../../styles/Theme";
+import { FlexWrapper } from "../../../../components/FlexWrapper.styled";
 
 type ProjectPropsType = {
   srcImg: string;
@@ -12,7 +13,7 @@ export const Project = (props: ProjectPropsType) => {
   return (
     <ProjectItem>
       <Image src={props.srcImg} alt={props.title} />
-      <WrapContent>
+      <WrapContent $direction="column" $gap="15px">
         <ProjectTitle>{props.title}</ProjectTitle>
         <TechStack>
           {props.stack.map((tech, index) => (
@@ -40,10 +41,7 @@ const Image = styled.img`
   height: 388px;
   object-fit: cover;
 `;
-const WrapContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+const WrapContent = styled(FlexWrapper)`
   padding: 30px;
 `;
 

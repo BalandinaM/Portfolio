@@ -35,7 +35,7 @@ export const Projects = () => {
     <section>
       <Container>
         <h2>Проекты</h2>
-        <FlexWrapper as="ul" wrap="wrap" colGap="30px" rowGap="15px">
+        <FlexWrapper as="ul" $wrap="wrap" $colgap="30px" $rowgap="15px">
           {ProjectsData.map((project, index) => (
             <Project
               key={index}

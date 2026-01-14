@@ -5,7 +5,4 @@ export const Container = styled.div`
     width: 100%;
     min-height: 100%;
     margin: 0 auto;
-    /* padding: 0 25px; */
-    /* outline: 2px solid red; */
-    padding-bottom: 140px;
 `;

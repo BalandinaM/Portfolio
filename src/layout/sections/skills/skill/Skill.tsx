@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
+import { FlexWrapper } from "../../../../components/FlexWrapper.styled";
 
 type SkillPropsType = {
   iconId: string;
@@ -8,20 +9,16 @@ type SkillPropsType = {
 
 export const Skill = (props:SkillPropsType) => {
   return (
-    <SkillItem>
+    <SkillItem $direction="column" $gap="20px" $align="center">
       <Icon iconId={props.iconId}/>
       <Text>{props.name}</Text>
+      {/* Добавить ссылку на гитхаб и гитхабпейджс */}
     </SkillItem>
   );
 };
 
-const SkillItem = styled.li`
+const SkillItem = styled(FlexWrapper)`
   padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
 `
 
 const Text = styled.span`

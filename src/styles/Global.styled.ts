@@ -71,6 +71,14 @@ export const GlobalStyle = createGlobalStyle`
         letter-spacing: 0.04em;
         background-color: unset;
         border: none;
+        border-radius: 5px;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    section {
+        padding: 70px 0;
     }
 
 
