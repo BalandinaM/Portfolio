@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { Theme } from './Theme'
+import { font } from "./Common";
+
 export const GlobalStyle = createGlobalStyle`
     *,
     *::before,
@@ -27,6 +29,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h1 {
+        ${font({family:"'Tinos', sans-serif", Fmin: 16, Fmax: 20})}
         font-family: 'Tinos', sans-serif;
         font-weight: 400;
         font-size: 20px;
