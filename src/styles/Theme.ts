@@ -14,6 +14,11 @@ export const Theme = {
 
     borderRadius: {
         borderRadius: "5px"
+    },
+
+    media: {
+        mobile: "414px",
+        tablet: "768px"
     }
 
     // night theme
