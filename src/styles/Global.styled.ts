@@ -26,13 +26,12 @@ export const GlobalStyle = createGlobalStyle`
         letter-spacing: 0.04em;
         background-color: ${Theme.colors.background};
         color: ${Theme.colors.text};
+
+        padding: 0 25px;
     }
 
     h1 {
-        ${font({family:"'Tinos', sans-serif", Fmin: 16, Fmax: 20})}
-        font-family: 'Tinos', sans-serif;
-        font-weight: 400;
-        font-size: 20px;
+        ${font({family: "'Tinos', sans-serif", Fmin: 16, Fmax: 20})}
         text-transform: uppercase;
     }
 
