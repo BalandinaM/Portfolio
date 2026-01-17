@@ -18,7 +18,7 @@ export const Theme = {
 
     media: {
         mobile: "414px",
-        tablet: "768px"
+        tablet: "1090px"
     }
 
     // night theme
