@@ -16,6 +16,5 @@ export const font = ({family, weight, color, lineHeight, letterSpacing, Fmin, Fm
     color: ${color || Theme.colors.text};
     line-height: ${lineHeight || 1.4};
     letter-spacing: ${letterSpacing || "0.04em"};
-    // font-size: calc( (100vw - 414px)/(1440-414) * (${Fmax} - ${Fmin}) + ${Fmin}px);
-    font-size: calc( (100vw - 414px)/(1440 - 414) * (${Fmax} - ${Fmin}) + ${Fmin}px);
+    font-size: clamp(${Fmin}px, calc( (100vw - 530px)/(1440 - 530) * (${Fmax} - ${Fmin}) + ${Fmin}px), ${Fmax}px);
 `

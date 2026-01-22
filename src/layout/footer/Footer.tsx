@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Menu } from "../../components/menu/Menu";
 import { ListLinks } from "./listLinks/ListLinks";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper.styled";
@@ -10,7 +9,6 @@ export const Footer = () => {
       <Container>
         <FlexWrapper $direction="column" $align="center" $rowgap="50px">
           <ListLinks />
-          <Menu />
           <Copyright>WEB DEVELOPER 2026</Copyright>
         </FlexWrapper>
       </Container>

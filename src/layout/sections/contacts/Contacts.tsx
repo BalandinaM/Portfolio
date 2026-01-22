@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { SectionTitle } from "../../../components/sectionTitle/SectionTitle.styled";
 import { Button } from "../../../components/button/Button";
 import { Container } from "../../../components/Container";
 import { Theme } from "../../../styles/Theme";
@@ -12,15 +11,29 @@ export const Contacts = () => {
         <Form>
           <InputWrap>
             <Label htmlFor="name">Имя</Label>
-            <Field type="text" name="name" id="name" placeholder="Иван Иванов"/>
+            <Field
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Иван Иванов"
+            />
           </InputWrap>
           <InputWrap>
             <Label htmlFor="email">Email</Label>
-            <Field type="email" name="email" id="email" placeholder="example@gmail.com"/>
+            <Field
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@gmail.com"
+            />
           </InputWrap>
           <InputWrap>
             <Label htmlFor="textarea">Сообщение</Label>
-            <TextareaField as={"textarea"} id="textarea" placeholder="Привет!..."/>
+            <TextareaField
+              as={"textarea"}
+              id="textarea"
+              placeholder="Привет!..."
+            />
           </InputWrap>
           <Button type="submit">Отправить</Button>
         </Form>
@@ -28,7 +41,6 @@ export const Contacts = () => {
     </section>
   );
 };
-
 
 const Form = styled.form`
   width: 530px;
@@ -40,6 +52,10 @@ const Form = styled.form`
   gap: 20px;
 
   Button {
+    width: 200px;
+  }
+
+  @media ${Theme.media.mobile} {
     width: 100%;
   }
 `;
@@ -49,9 +65,9 @@ const InputWrap = styled.div`
   display: flex;
   flex-direction: column;
   gap: 6px;
-  font-family: 'Montserrat', sans-serif;
-  
+  font-family: "Montserrat", sans-serif;
 `;
+
 const Label = styled.label`
   text-align: left;
   font-size: 14px;
@@ -62,10 +78,11 @@ const Field = styled.input`
   font-size: 16px;
   font-weight: 500;
   padding: 15px 18px;
-  border-radius: ${Theme.borderRadius.borderRadius};
+  border-radius: 10px;
+  border: 2px solid #5222d0;
 
   &::placeholder {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 14px;
   }
 `;

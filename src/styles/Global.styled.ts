@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { Theme } from './Theme'
+import { Theme } from "./Theme";
 import { font } from "./Common";
 
 export const GlobalStyle = createGlobalStyle`
@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         height: 100vh;
+        min-width: 320px;
         margin: 0;
         font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -31,7 +32,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h1 {
-        ${font({family: "'Tinos', sans-serif", Fmin: 16, Fmax: 20})}
+        ${font({ family: "'Tinos', sans-serif", Fmin: 16, Fmax: 20 })}
         text-transform: uppercase;
     }
 
@@ -41,6 +42,7 @@ export const GlobalStyle = createGlobalStyle`
         line-height: 26px;
         color: ${Theme.colors.title};
         margin-bottom: 30px;
+        text-shadow: ${Theme.boxShadow.text};
     }
 
     h3 {
@@ -52,12 +54,14 @@ export const GlobalStyle = createGlobalStyle`
     a {
         text-decoration: none;
         color: inherit;
+        display: block;
         padding: 12px 20px;
         font-size: 16px;
         border: none;
 
         &:hover {
-            background-color: ${Theme.colors.primary};
+            background: ${Theme.gradient.gradient};
+            box-shadow: ${Theme.gradient.gradientShadow};
             color: ${Theme.colors.buttonText};
             font-weight: 500;
             border-radius: ${Theme.borderRadius.borderRadius};
@@ -73,14 +77,22 @@ export const GlobalStyle = createGlobalStyle`
         letter-spacing: 0.04em;
         background-color: unset;
         border: none;
-        border-radius: 5px;
-        padding: 12px 20px;
+        border-radius: ${Theme.borderRadius.borderRadius};
+        padding: 16px 24px;
         font-size: 16px;
         font-weight: 500;
     }
 
     section {
         padding: 70px 0;
+
+        @media ${Theme.media.tablet} {
+           padding: 60px 0;
+        }
+
+        @media ${Theme.media.mobile} {
+           padding: 50px 0;
+        }
     }
 
 

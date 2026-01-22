@@ -25,9 +25,9 @@ const MenuItems = [
   },
 ];
 
-export const Menu = () => {
+export const MobileMenu = ({ isOpen }) => {
   return (
-    <NavMenu>
+    <NavMenu $isOpen={isOpen}>
       <NavWrapper as="ul" $justify="center" $colgap="30px">
         {MenuItems.map((item, index) => (
           <li key={index}>
@@ -39,9 +39,13 @@ export const Menu = () => {
   );
 };
 
-const NavMenu = styled.nav`
-  @media ${Theme.media.tablet} {
+const NavMenu = styled.nav<{ $isOpen: boolean }>`
+  @media ${Theme.media.maxTablet} {
     display: none;
+  }
+
+  @media ${Theme.media.tablet} {
+    display: ${({ $isOpen }) => ($isOpen ? "block" : "none")};
   }
 `;
 
@@ -50,5 +54,6 @@ const NavWrapper = styled(FlexWrapper)`
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    padding-bottom: 40px;
   }
 `;

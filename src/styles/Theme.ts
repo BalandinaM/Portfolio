@@ -4,21 +4,30 @@ export const Theme = {
         secondaryBg: "#f5f2fd",
         primary: "#5222d0",
         text: "#1f2626",
-        buttonText: "#dbffff",
+        buttonText: "#fafafa",
         title: "#151717"
     },
 
     boxShadow: {
-        projectCard: "2px 2px 32px 0px rgba(40, 38, 44, 0.15)",
+        // projectCard: "2px 2px 32px 0px rgba(40, 38, 44, 0.15)",
+        projectCard: "0 10px 15px rgba(82, 34, 208, 0.2)",
+        text: "0 8px 20px rgba(82, 34, 208, 0.3)",
+    },
+
+    gradient: {
+        gradient: "linear-gradient(135deg, #5222d0 30%, #ec615b 100%)",
+        gradientOpacity: "linear-gradient(135deg, rgba(82, 34, 208, 0.7) 60%, rgba(236, 97, 91, 0.5) 100%)",
+        gradientShadow: "0 8px 20px rgba(82, 34, 208, 0.3)",
     },
 
     borderRadius: {
-        borderRadius: "5px"
+        borderRadius: "0 20px 20px 20px;"
     },
 
     media: {
-        mobile: "414px",
-        tablet: "1090px"
+        mobile: "(max-width: 576px)",
+        tablet: "(max-width: 1120px)",
+        maxTablet: "(min-width: 1120px)"
     }
 
     // night theme

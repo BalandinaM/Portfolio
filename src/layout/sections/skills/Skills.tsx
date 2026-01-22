@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { Skill } from "./skill/Skill";
 import { Container } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper.styled";
@@ -58,12 +59,19 @@ export const Skills = () => {
     <section>
       <Container>
         <h2>Технологии</h2>
-        <FlexWrapper as="ul" $wrap="wrap" $gap="30px" $justify="center">
+        <SkillsWrap as="ul" $wrap="wrap" $gap="30px" $justify="center">
           {SkillsData.map((skill, index) => (
             <Skill key={index} iconId={skill.iconId} name={skill.name} />
           ))}
-        </FlexWrapper>
+        </SkillsWrap>
       </Container>
     </section>
   );
 };
+
+const SkillsWrap = styled(FlexWrapper)`
+  @media (max-width: 768px) {
+    column-gap: 28px;
+    row-gap: 60px;
+  }
+`;

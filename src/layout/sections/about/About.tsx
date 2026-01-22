@@ -15,6 +15,10 @@ export const About = () => {
 
 const Title = styled.h2`
   padding-left: 20px;
+  
+  @media ${Theme.media.mobile} {
+    margin-bottom: 20px;
+  }
 `
 
 const Text = styled.p`
@@ -28,7 +32,12 @@ const Text = styled.p`
     left: 0;
     width: 5px;
     height: 100%;
-    background-color: ${Theme.colors.primary};
+    background: ${Theme.gradient.gradient};
     border-radius: 5px;
+
+
+    @media ${Theme.media.mobile} {
+      height: 33.3%;
+    }
   }
 `

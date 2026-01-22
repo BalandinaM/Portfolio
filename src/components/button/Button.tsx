@@ -6,7 +6,8 @@ type ButtonProps = {
 }
 
 export const Button = styled.button<ButtonProps>`
-    background-color: ${Theme.colors.primary};
+    background: ${Theme.gradient.gradient};
+    box-shadow: ${Theme.gradient.gradientShadow};
     color: ${Theme.colors.buttonText};
     text-transform: ${props => props.transform || ""};
 `

@@ -11,7 +11,7 @@ type ProjectPropsType = {
 
 export const Project = (props: ProjectPropsType) => {
   return (
-    <ProjectItem>
+    <ProjectItem as="li" $gap="20px" $direction="column">
       <Image src={props.srcImg} alt={props.title} />
       <WrapContent $direction="column" $gap="15px">
         <ProjectTitle>{props.title}</ProjectTitle>
@@ -26,23 +26,32 @@ export const Project = (props: ProjectPropsType) => {
   );
 };
 
-const ProjectItem = styled.li`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 20px;
+const ProjectItem = styled(FlexWrapper)`
   max-width: 522px;
-  box-sizing: border-box;
   box-shadow: ${Theme.boxShadow.projectCard};
+
+  @media ${Theme.media.tablet} {
+    width: 400px;
+    gap: 0;
+  }
 `;
 
 const Image = styled.img`
-  width: 522px;
+  max-width: 522px;
   height: 388px;
   object-fit: cover;
+
+  @media ${Theme.media.tablet} {
+    width: 400px;
+  }
 `;
+
 const WrapContent = styled(FlexWrapper)`
   padding: 30px;
+
+  @media ${Theme.media.mobile} {
+    padding: 17px;
+  }
 `;
 
 const ProjectTitle = styled.h3`
@@ -59,10 +68,12 @@ const TechStack = styled.ul`
 
 const TechStackItem = styled.li`
   padding: 8px 16px;
-  background-color: ${Theme.colors.primary};
+  /* background-color: ${Theme.colors.primary}; */
+  background: ${Theme.gradient.gradientOpacity};
   border-radius: ${Theme.borderRadius.borderRadius};
   color: ${Theme.colors.buttonText};
   font-size: 10px;
+  font-weight: 600;
   line-height: 14px;
   letter-spacing: 0.12em;
   text-transform: uppercase;

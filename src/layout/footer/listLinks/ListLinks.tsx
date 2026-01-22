@@ -68,7 +68,9 @@ const Link = styled.a`
   padding: 0;
 
   &:hover {
-    background-color: transparent;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
 
     & svg {
       transform: scale(1.2);
