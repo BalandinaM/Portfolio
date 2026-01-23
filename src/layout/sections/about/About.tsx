@@ -1,7 +1,7 @@
 import { Container } from "../../../components/Container"
 import { S } from "./About_Styles"
 
-export const About = () => {
+export const About: React.FC = () => {
   return (
     <section>
       <Container>

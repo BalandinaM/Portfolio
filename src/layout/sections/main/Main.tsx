@@ -2,7 +2,7 @@ import Avatar from "../../../assets/avatar.svg";
 import { Button } from "../../../components/button/Button";
 import { S } from "./Main_Styles";
 
-export const Main = () => {
+export const Main: React.FC = () => {
   return (
     <S.MainSection>
       <S.MainContainer>

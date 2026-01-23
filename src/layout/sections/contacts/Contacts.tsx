@@ -2,7 +2,7 @@ import { Button } from "../../../components/button/Button";
 import { Container } from "../../../components/Container";
 import { S } from "./Contacts_Styles";
 
-export const Contacts = () => {
+export const Contacts:React.FC = () => {
   return (
     <section>
       <Container>
