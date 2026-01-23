@@ -2,6 +2,7 @@ import { Project } from "./project/Project";
 import imgProject from "../../../assets/image.png"
 import { Container } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper.styled";
+import React from "react";
 
 const ProjectsData = [
   {
@@ -30,7 +31,7 @@ const ProjectsData = [
   },
 ]
 
-export const Projects = () => {
+export const Projects: React.FC = () => {
   return (
     <section>
       <Container>
