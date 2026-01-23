@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { Theme } from "../../../styles/Theme";
 
 const Title = styled.h2`

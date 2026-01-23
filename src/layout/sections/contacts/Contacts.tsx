@@ -1,94 +1,42 @@
-import styled from "styled-components";
 import { Button } from "../../../components/button/Button";
 import { Container } from "../../../components/Container";
-import { Theme } from "../../../styles/Theme";
+import { S } from "./Contacts_Styles";
 
 export const Contacts = () => {
   return (
     <section>
       <Container>
         <h2>Обратная связь</h2>
-        <Form>
-          <InputWrap>
-            <Label htmlFor="name">Имя</Label>
-            <Field
+        <S.Form>
+          <S.InputWrap>
+            <S.Label htmlFor="name">Имя</S.Label>
+            <S.Field
               type="text"
               name="name"
               id="name"
               placeholder="Иван Иванов"
             />
-          </InputWrap>
-          <InputWrap>
-            <Label htmlFor="email">Email</Label>
-            <Field
+          </S.InputWrap>
+          <S.InputWrap>
+            <S.Label htmlFor="email">Email</S.Label>
+            <S.Field
               type="email"
               name="email"
               id="email"
               placeholder="example@gmail.com"
             />
-          </InputWrap>
-          <InputWrap>
-            <Label htmlFor="textarea">Сообщение</Label>
-            <TextareaField
+          </S.InputWrap>
+          <S.InputWrap>
+            <S.Label htmlFor="textarea">Сообщение</S.Label>
+            <S.TextareaField
               as={"textarea"}
               id="textarea"
               placeholder="Привет!..."
             />
-          </InputWrap>
+          </S.InputWrap>
           <Button type="submit">Отправить</Button>
-        </Form>
+        </S.Form>
       </Container>
     </section>
   );
 };
-
-const Form = styled.form`
-  width: 530px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-
-  Button {
-    width: 200px;
-  }
-
-  @media ${Theme.media.mobile} {
-    width: 100%;
-  }
-`;
-
-const InputWrap = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-family: "Montserrat", sans-serif;
-`;
-
-const Label = styled.label`
-  text-align: left;
-  font-size: 14px;
-`;
-
-const Field = styled.input`
-  text-align: left;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 15px 18px;
-  border-radius: 10px;
-  border: 2px solid #5222d0;
-
-  &::placeholder {
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-  }
-`;
-
-const TextareaField = styled(Field)`
-  min-height: 120px;
-  min-width: 300px;
-  resize: vertical;
-`;
