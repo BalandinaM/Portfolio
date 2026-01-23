@@ -1,8 +1,17 @@
-import styled from "styled-components";
 import { Icon } from "../../../components/icon/Icon";
-import { Theme } from "../../../styles/Theme";
+import { S } from "../Footer_Styled";
 
-const ContactsData = [
+type ContactProps = {
+  id: number;
+  href: string;
+  iconId: string;
+  iconWidth: string;
+  iconHeight: string;
+  iconViewBox: string;
+  text: string;
+};
+
+const ContactsData: ContactProps[] = [
   {
     id: 1,
     href: "#",
@@ -32,60 +41,22 @@ const ContactsData = [
   },
 ];
 
-export const ListLinks = () => {
+export const ListLinks: React.FC = () => {
   return (
-    <ListLinksStyled>
+    <S.ListLinks>
       {ContactsData.map((contact) => (
         <li key={contact.id}>
-          <Link href={contact.href}>
+          <S.Link href={contact.href}>
             <Icon
               iconId={contact.iconId}
               width={contact.iconWidth}
               height={contact.iconHeight}
               viewBox={contact.iconViewBox}
             />
-            <Text>{contact.text}</Text>
-          </Link>
+            <S.Text>{contact.text}</S.Text>
+          </S.Link>
         </li>
       ))}
-    </ListLinksStyled>
+    </S.ListLinks>
   );
 };
-
-const ListLinksStyled = styled.ul`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 70px;
-`;
-
-const Link = styled.a`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 0;
-
-  &:hover {
-    background: transparent;
-    box-shadow: none;
-    border-radius: 0;
-
-    & svg {
-      transform: scale(1.2);
-    }
-
-    & span {
-      color: ${Theme.colors.text};
-      transform: scale(1.2);
-    }
-  }
-`;
-
-const Text = styled.span`
-  font-size: 12px;
-  line-height: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-`;

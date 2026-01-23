@@ -1,25 +1,17 @@
-import styled from "styled-components";
 import { ListLinks } from "./listLinks/ListLinks";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper.styled";
+import { S } from "./Footer_Styled";
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   return (
-    <StyledFooter>
+    <S.StyledFooter>
       <Container>
         <FlexWrapper $direction="column" $align="center" $rowgap="50px">
           <ListLinks />
-          <Copyright>WEB DEVELOPER 2026</Copyright>
+          <S.Copyright>WEB DEVELOPER 2026</S.Copyright>
         </FlexWrapper>
       </Container>
-    </StyledFooter>
+    </S.StyledFooter>
   );
 };
-
-const StyledFooter = styled.footer`
-  padding:70px 0;
-`
-
-const Copyright = styled.span`
-  text-transform: uppercase;
-`
