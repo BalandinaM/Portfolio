@@ -1,9 +1,13 @@
-import styled from "styled-components";
 import { Skill } from "./skill/Skill";
 import { Container } from "../../../components/Container";
-import { FlexWrapper } from "../../../components/FlexWrapper.styled";
+import { S } from "./Skills_Styles";
 
-const SkillsData = [
+export type SkillProps = {
+  iconId: string;
+  name: string;
+}
+
+const SkillsData: SkillProps[] = [
   {
     iconId: "js",
     name: "java script",
@@ -54,24 +58,18 @@ const SkillsData = [
   },
 ];
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
   return (
     <section>
       <Container>
         <h2>Технологии</h2>
-        <SkillsWrap as="ul" $wrap="wrap" $gap="30px" $justify="center">
+        <S.Wrap as="ul" $wrap="wrap" $gap="30px" $justify="center">
           {SkillsData.map((skill, index) => (
             <Skill key={index} iconId={skill.iconId} name={skill.name} />
           ))}
-        </SkillsWrap>
+        </S.Wrap>
       </Container>
     </section>
   );
 };
 
-const SkillsWrap = styled(FlexWrapper)`
-  @media (max-width: 768px) {
-    column-gap: 28px;
-    row-gap: 60px;
-  }
-`;
