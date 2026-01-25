@@ -46,7 +46,7 @@ export const Header: React.FC = () => {
   return (
     <S.Header>
       <Container>
-        <S.BurgerButton onClick={() => setIsOpenMenu((prev) => !prev)}>
+        <S.BurgerButton $isOpen = {isOpenMenu} onClick={() => setIsOpenMenu((prev) => !prev)}>
           <span></span>
         </S.BurgerButton>
         <S.HeaderWrap $justify="flex-end" $align="center">

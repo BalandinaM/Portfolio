@@ -32,7 +32,7 @@ const HeaderWrap = styled(FlexWrapper)`
   }
 `;
 
-const BurgerButton = styled.button`
+const BurgerButton = styled.button<{$isOpen: boolean}>`
   @media ${Theme.media.maxTablet} {
     display: none;
   }
@@ -53,6 +53,7 @@ const BurgerButton = styled.button`
     border-radius: 5px;
     background: ${Theme.gradient.gradient};
     position: relative;
+    transition: transform 0.3s ease;
 
     &::before {
       content: "";
@@ -61,7 +62,8 @@ const BurgerButton = styled.button`
       height: 3px;
       border-radius: 5px;
       background: ${Theme.gradient.gradient};
-      transform: translateY(-10px);
+      transition: transform 0.3s ease;
+      transform: ${({ $isOpen }) => $isOpen ? 'rotate(270deg)' : 'translateY(-10px)'};
     }
 
     &::after {
@@ -74,7 +76,11 @@ const BurgerButton = styled.button`
       position: absolute;
       right: 0;
       transform: translateY(7px);
+      opacity: ${({ $isOpen }) => $isOpen ? 0 : 1};
+      transition: opacity 0.3s ease;
     }
+
+    transform: ${({ $isOpen }) => $isOpen ? 'rotate(-135deg)' : 'rotate(0)'};
   }
 `;
 
