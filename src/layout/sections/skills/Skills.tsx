@@ -1,11 +1,12 @@
 import { Skill } from "./skill/Skill";
 import { Container } from "../../../components/Container";
 import { S } from "./Skills_Styles";
+import { Fade, AttentionSeeker } from "react-awesome-reveal";
 
 export type SkillProps = {
   iconId: string;
   name: string;
-}
+};
 
 const SkillsData: SkillProps[] = [
   {
@@ -64,12 +65,15 @@ export const Skills: React.FC = () => {
       <Container>
         <h2>Технологии</h2>
         <S.Wrap as="ul" $wrap="wrap" $gap="30px" $justify="center">
-          {SkillsData.map((skill, index) => (
-            <Skill key={index} iconId={skill.iconId} name={skill.name} />
-          ))}
+          <Fade cascade damping={0.05}>
+            {SkillsData.map((skill, index) => (
+              <AttentionSeeker effect="pulse">
+                <Skill key={index} iconId={skill.iconId} name={skill.name} />
+              </AttentionSeeker>
+            ))}
+          </Fade>
         </S.Wrap>
       </Container>
     </section>
   );
 };
-
