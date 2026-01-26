@@ -54,7 +54,7 @@ const BurgerButton = styled.button<{$isOpen: boolean}>`
     border-radius: 5px;
     background: ${Theme.gradient.gradient};
     position: relative;
-    transition: transform 0.3s ease;
+    transition: transform ${Theme.animations.transitionBurgerBtn};
 
     &::before {
       content: "";
@@ -63,7 +63,7 @@ const BurgerButton = styled.button<{$isOpen: boolean}>`
       height: 3px;
       border-radius: 5px;
       background: ${Theme.gradient.gradient};
-      transition: transform 0.3s ease;
+      transition: transform ${Theme.animations.transitionBurgerBtn};
       transform: ${({ $isOpen }) => $isOpen ? 'rotate(270deg)' : 'translateY(-10px)'};
     }
 
@@ -78,7 +78,7 @@ const BurgerButton = styled.button<{$isOpen: boolean}>`
       right: 0;
       transform: translateY(7px);
       opacity: ${({ $isOpen }) => $isOpen ? 0 : 1};
-      transition: opacity 0.3s ease;
+      transition: opacity ${Theme.animations.transitionBurgerBtn};
     }
 
     transform: ${({ $isOpen }) => $isOpen ? 'rotate(-135deg)' : 'rotate(0)'};
@@ -86,6 +86,7 @@ const BurgerButton = styled.button<{$isOpen: boolean}>`
 `;
 
 const NavMenu = styled.nav<{ $isOpen: boolean }>`
+
   @media ${Theme.media.tablet} {
     display: ${({ $isOpen }) => ($isOpen ? "block" : "none")};
   }

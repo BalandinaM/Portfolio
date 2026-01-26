@@ -39,10 +39,15 @@ const Field = styled.input`
   padding: 15px 18px;
   border-radius: 10px;
   border: 2px solid #5222d0;
+  transition: all ${Theme.animations.transition};
 
   &::placeholder {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
+  }
+
+  &:hover {
+    background: ${Theme.gradient.gradientInput};
   }
 `;
 

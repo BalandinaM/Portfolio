@@ -28,14 +28,15 @@ const Link = styled.a`
     background: transparent;
     box-shadow: none;
     border-radius: 0;
+    transition: all ${Theme.animations.transition};
 
     & svg {
-      transform: scale(1.2);
+      transform: scale(1.05);
     }
 
     & span {
       color: ${Theme.colors.text};
-      transform: scale(1.2);
+      transform: scale(1.05);
     }
   }
 `;

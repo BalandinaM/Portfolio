@@ -58,8 +58,10 @@ export const GlobalStyle = createGlobalStyle`
         padding: 12px 20px;
         font-size: 16px;
         border: none;
+        border-radius: ${Theme.borderRadius.borderRadius};
+        transition: all ${Theme.animations.transition};
 
-        &:hover {
+        &:hover, &:active {
             background: ${Theme.gradient.gradient};
             box-shadow: ${Theme.gradient.gradientShadow};
             color: ${Theme.colors.buttonText};

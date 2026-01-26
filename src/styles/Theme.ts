@@ -17,6 +17,7 @@ export const Theme = {
     gradient: {
         gradient: "linear-gradient(135deg, #5222d0 30%, #ec615b 100%)",
         gradientOpacity: "linear-gradient(135deg, rgba(82, 34, 208, 0.7) 60%, rgba(236, 97, 91, 0.5) 100%)",
+        gradientInput: "linear-gradient(135deg, rgba(82, 34, 208, 0.2) 40%, rgba(236, 97, 91, 0.2) 100%)",
         gradientShadow: "0 8px 20px rgba(82, 34, 208, 0.3)",
     },
 
@@ -28,6 +29,11 @@ export const Theme = {
         mobile: "(max-width: 576px)",
         tablet: "(max-width: 1120px)",
         maxTablet: "(min-width: 1120px)"
+    },
+
+    animations: {
+        transition: ".2s ease-in-out",
+        transitionBurgerBtn: "0.3s ease-in-out",
     }
 
     // night theme

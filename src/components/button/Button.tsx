@@ -10,5 +10,10 @@ export const Button = styled.button<ButtonProps>`
     box-shadow: ${Theme.gradient.gradientShadow};
     color: ${Theme.colors.buttonText};
     text-transform: ${props => props.transform || ""};
+    transition: transform ${Theme.animations.transition};
+
+    &:hover {
+        transform: scale(1.02);
+    }
 `
 
