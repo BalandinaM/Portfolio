@@ -14,7 +14,10 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, menuItems }) => 
       <S.NavWrapper as="ul" $justify="center" $colgap="30px">
         {menuItems.map((item, index) => (
           <li key={index}>
-            <a href={item.href}>{item.name}</a>
+            <S.NavLink 
+            to={item.href}
+            smooth={true}
+            >{item.name}</S.NavLink>
           </li>
         ))}
       </S.NavWrapper>

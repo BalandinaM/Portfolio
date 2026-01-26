@@ -60,7 +60,7 @@ const SkillsData: SkillProps[] = [
 
 export const Skills: React.FC = () => {
   return (
-    <section>
+    <section id="stack">
       <Container>
         <h2>Технологии</h2>
         <S.Wrap as="ul" $wrap="wrap" $gap="30px" $justify="center">

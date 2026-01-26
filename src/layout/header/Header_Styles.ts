@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { FlexWrapper } from "../../components/FlexWrapper.styled";
 import { Theme } from "../../styles/Theme";
+import { Link } from "react-scroll";
 
 const Header = styled.header`
   font-size: 16px;
@@ -99,10 +100,28 @@ const NavWrapper = styled(FlexWrapper)`
   }
 `;
 
+const NavLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+
+  &:hover, &.active {
+    background: ${Theme.gradient.gradient};
+    box-shadow: ${Theme.gradient.gradientShadow};
+    color: ${Theme.colors.buttonText};
+    font-weight: 500;
+    border-radius: ${Theme.borderRadius.borderRadius};
+  }
+`;
+
 export const S = {
     Header,
     HeaderWrap,
     BurgerButton, 
     NavMenu,
+    NavLink,
     NavWrapper
 }

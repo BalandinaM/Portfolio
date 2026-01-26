@@ -1,4 +1,5 @@
 import "./App.css";
+import { GoTopBtn } from "./components/gotopBtn/GoTopBtn";
 import { Footer } from "./layout/footer/Footer";
 import { Header } from "./layout/header/Header";
 import { About } from "./layout/sections/about/About";
@@ -17,6 +18,7 @@ function App() {
       <Skills />
       <Contacts />
       <Footer />
+      <GoTopBtn />
     </div>
   );
 }

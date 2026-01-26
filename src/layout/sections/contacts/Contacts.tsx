@@ -5,7 +5,7 @@ import { S } from "./Contacts_Styles";
 export const Contacts:React.FC = () => {
   return (
     <section>
-      <Container>
+      <Container id="contacts">
         <h2>Обратная связь</h2>
         <S.Form>
           <S.InputWrap>

@@ -34,13 +34,13 @@ const Title = styled.h3`
   text-transform: uppercase;
 `;
 
-const TechStack = styled.ul`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 10px;
-  padding: 0;
-`;
+// const TechStack = styled.ul`
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-start;
+//   gap: 10px;
+//   padding: 0;
+// `;
 
 const TechStackItem = styled.li`
   padding: 8px 16px;
@@ -54,17 +54,24 @@ const TechStackItem = styled.li`
   letter-spacing: 0.12em;
   text-transform: uppercase;
 `;
+
 const Text = styled.p`
   font-size: 16px;
   line-height: 24px;
 `;
+
+const LinkItem = styled.li`
+  text-transform: uppercase;
+  font-weight: 500;
+`
 
 export const S = {
   Item,
   Image,
   WrapContent,
   Title,
-  TechStack,
+  // TechStack,
   TechStackItem,
   Text,
+  LinkItem
 };

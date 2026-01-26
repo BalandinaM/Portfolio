@@ -6,6 +6,10 @@ import { MobileMenu } from "./menu/MobileMenu";
 import { S } from "./Header_Styles";
 import React from "react";
 
+// создаем объекты для каждого пунката меню, там название пункта меню и сслыка на секцию. Секциям присваивает id как в объекте см скрин
+
+// устанавливает библиотеку реакт скролл
+
 export type MenuItem = {
   name: string;
   href: string;
@@ -14,23 +18,23 @@ export type MenuItem = {
 const menuItems: MenuItem[] = [
   {
     name: "Главная",
-    href: "#",
+    href: "home",
   },
   {
     name: "Обо мне",
-    href: "#",
+    href: "about",
   },
   {
     name: "Проекты",
-    href: "#",
+    href: "projects",
   },
   {
     name: "Технологический стек",
-    href: "#",
+    href: "stack",
   },
   {
     name: "Контакты",
-    href: "#",
+    href: "contacts",
   },
 ];
 

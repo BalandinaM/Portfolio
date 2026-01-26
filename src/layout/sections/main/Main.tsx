@@ -4,7 +4,7 @@ import { S } from "./Main_Styles";
 
 export const Main: React.FC = () => {
   return (
-    <S.MainSection>
+    <S.MainSection id="home">
       <S.MainContainer>
         <S.MainFlexWrapper $align="center" $justify="center">
           <S.ContentWrap
